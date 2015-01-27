@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/home_lv_marginTop"
+        android:layout_marginTop="@dimen/home_lv_marginTop"
+        android:text="@string/person_sex"
+        android:textColor="@color/bbutton_info"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/gender_male"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginRight="@dimen/home_lv_marginTop"
+        android:layout_marginTop="@dimen/guide_margin"
+        android:background="@drawable/person_bottom"
+        android:drawableRight="@drawable/get"
+        android:gravity="left|center_vertical"
+        android:text="@string/male" />
+
+    <Button
+        android:id="@+id/gender_female"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gender_male"
+        android:layout_below="@+id/gender_male"
+        android:layout_marginBottom="@dimen/home_lv_marginTop"
+        android:layout_marginRight="@dimen/home_lv_marginTop"
+        android:background="@drawable/person_bottom"
+        android:drawableRight="@drawable/get"
+        android:gravity="left|center_vertical"
+        android:text="@string/female" />
+
+</RelativeLayout>

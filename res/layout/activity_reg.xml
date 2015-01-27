@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <com.dd.widget.ClearEditText
+        android:id="@+id/reg_account"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edit_bg"
+        android:drawableLeft="@drawable/account"
+        android:drawableRight="@drawable/close"
+        android:hint="@string/account"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <com.dd.widget.ClearEditText
+        android:id="@+id/reg_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reg_account"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg"
+        android:drawableLeft="@drawable/password"
+        android:drawableRight="@drawable/close"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <com.dd.widget.ClearEditText
+        android:id="@+id/reg_copypsw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reg_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg"
+        android:drawableLeft="@drawable/password"
+        android:drawableRight="@drawable/close"
+        android:hint="@string/repsw"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg_copypsw"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_button"
+        android:text="@string/register"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/reg_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/reg_btn"
+        android:layout_below="@+id/reg_btn"
+        android:layout_marginRight="94dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/login"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reg_login"
+        android:layout_alignBottom="@+id/reg_login"
+        android:layout_toLeftOf="@+id/reg_login"
+        android:text="@string/redirect" />
+
+</RelativeLayout>

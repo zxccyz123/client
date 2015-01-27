@@ -1,0 +1,146 @@
+<com.dd.widget.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draglayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/home_padding_bottom"
+        android:paddingLeft="@dimen/home_padding_left"
+        android:paddingTop="@dimen/home_padding_top" >
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.dd.widget.CircleImageView
+                android:id="@+id/iv_bottom"
+                android:layout_width="@dimen/home_big_head"
+                android:layout_height="@dimen/home_big_head"
+                android:src="@drawable/head" />
+
+            <TextView
+                android:id="@+id/home_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/home_bg_name_marginleft"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/home_bg_name_textsize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/home_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/auth"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/home_bg_copyright_textsize" />
+
+        <ListView
+            android:id="@+id/home_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/home_copyright"
+            android:layout_below="@id/ll1"
+            android:layout_marginBottom="@dimen/home_lv_marginBottom"
+            android:layout_marginTop="@dimen/home_lv_marginTop"
+            android:cacheColorHint="@color/black"
+            android:divider="@null"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <com.dd.widget.MyRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionbar_height"
+            android:background="@color/top" >
+
+            <com.dd.widget.CircleImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="@dimen/home_small_head"
+                android:layout_height="@dimen/home_small_head"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/usual_margin_left"
+                android:scaleType="centerCrop"
+                android:src="@drawable/head" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_textsize" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_title"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/home_bg_name_marginleft" >
+
+            <EditText
+                android:id="@+id/home_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bg"
+                android:inputType="text"
+                android:padding="@dimen/edit_padding" />
+
+            <ImageButton
+                android:id="@+id/loc_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/edit_padding"
+                android:layout_marginTop="@dimen/loc_padding_top"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/loc_button" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/home_explain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/explain_height"
+            android:layout_below="@+id/frame"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/home_padding_top"
+            android:background="@drawable/edit_bg"
+            android:gravity="left|top"
+            android:hint="@string/explain"
+            android:inputType="textMultiLine"
+            android:maxLength="8"
+            android:padding="@dimen/edit_padding" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/usual_margin_left"
+            android:layout_marginLeft="@dimen/usual_margin_left"
+            android:layout_marginRight="@dimen/usual_margin_left"
+            android:background="@drawable/login_button"
+            android:text="@string/send"
+            android:textColor="@android:color/white" />
+    </com.dd.widget.MyRelativeLayout>
+
+</com.dd.widget.DragLayout>

@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".PersonActivity" >
+
+    <RelativeLayout
+        android:id="@+id/person_top"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/top" >
+
+        <Button
+            android:id="@+id/person_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/back"
+            android:text="@string/person"
+            android:textColor="@drawable/font_selector" />
+
+        <com.dd.widget.CircleImageView
+            android:id="@+id/person_head"
+            android:layout_width="@dimen/home_big_head"
+            android:layout_height="@dimen/home_big_head"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/head" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/person_top" >
+
+        <TextView
+            android:id="@+id/person_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/person_name" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/person_1"
+            android:layout_alignBottom="@+id/person_1"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/person_1" />
+
+        <TextView
+            android:id="@+id/person_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/person_1"
+            android:layout_below="@+id/person_1"
+            android:layout_marginTop="14dp"
+            android:text="@string/person_sex" />
+
+        <TextView
+            android:id="@+id/person_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/person_2"
+            android:layout_alignBottom="@+id/person_2"
+            android:layout_alignLeft="@+id/person_name" />
+
+        <TextView
+            android:id="@+id/person_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/person_2"
+            android:layout_below="@+id/person_2"
+            android:layout_marginTop="14dp"
+            android:text="@string/person_phone" />
+
+        <TextView
+            android:id="@+id/person_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/person_3"
+            android:layout_alignBottom="@+id/person_3"
+            android:layout_alignLeft="@+id/person_sex" />
+
+        <TextView
+            android:id="@+id/person_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/person_3"
+            android:layout_below="@+id/person_3"
+            android:layout_marginTop="14dp"
+            android:text="@string/person_address" />
+
+        <TextView
+            android:id="@+id/person_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/person_4"
+            android:layout_alignBottom="@+id/person_4"
+            android:layout_alignLeft="@+id/person_phone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schem as.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".CompletePersonActivity" >
+
+    <RelativeLayout
+        android:id="@+id/cp_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/complete_person"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/cp_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentRight="true"
+            android:text="@string/finish"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cp_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cp_head"
+        android:layout_below="@+id/cp_top"
+        android:layout_marginTop="@dimen/cp_margin_top"
+        android:background="@drawable/person" >
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:text="@string/person_head" />
+
+        <ImageView
+            android:id="@+id/cp_head"
+            android:layout_width="@dimen/home_big_head"
+            android:layout_height="@dimen/home_big_head"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/guide_margin"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/head" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cp_gender_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cp_edit_height"
+        android:layout_below="@+id/cp_head_layout"
+        android:background="@drawable/person_bottom" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:text="@string/person_sex" />
+
+        <TextView
+            android:id="@+id/cp_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/guide_margin"
+            android:text="@string/male"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cp_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cp_edit_height"
+        android:layout_below="@+id/cp_gender_layout"
+        android:layout_marginTop="@dimen/home_lv_marginTop"
+        android:background="@drawable/person" >
+
+        <TextView
+            android:id="@+id/cp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:text="@string/person_name" />
+
+        <EditText
+            android:id="@+id/cp_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cp_name"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:layout_marginRight="@dimen/guide_margin"
+            android:layout_toRightOf="@+id/cp_name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cp_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cp_edit_height"
+        android:layout_below="@+id/cp_1"
+        android:background="@drawable/person" >
+
+        <TextView
+            android:id="@+id/cp_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:text="@string/person_credit_id" />
+
+        <EditText
+            android:id="@+id/cp_credit_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cp_credit"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:layout_marginRight="@dimen/guide_margin"
+            android:layout_toRightOf="@+id/cp_credit"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cp_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cp_edit_height"
+        android:layout_below="@+id/cp_2"
+        android:background="@drawable/person_bottom" >
+
+        <TextView
+            android:id="@+id/cp_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:text="@string/person_address" />
+
+        <EditText
+            android:id="@+id/cp_address_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cp_address"
+            android:layout_marginLeft="@dimen/guide_margin"
+            android:layout_marginRight="@dimen/guide_margin"
+            android:layout_toRightOf="@+id/cp_address"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text" />
+    </RelativeLayout>
+
+</RelativeLayout>
